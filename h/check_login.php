@@ -1,5 +1,9 @@
 <?php
-	include_once("check_login.php");
+	session_start();
+	if(empty($_SESSION['aid'])) {
+		echo "Access Denied";
+		echo "<meta http-equiv='refresh' content='5; url=index.php'>";
+		}
 ?>
 <!doctype html>
 <html>
@@ -15,9 +19,9 @@
  
  <ul>
  	<a href="products.php"><li>จัดการสินค้า</li></a>
-	<a href="orders.php"><li>จัดการออเดอร์</li></a>
-    <a href="costomers.php"><li>จัดการลูกค้า</li></a>
-    <a href="logout.php"><li>ออกจากระบบ</li></a>
+	<a href="products.php"><li>จัดการออเดอร์</li></a>
+    <a href="products.php"><li>จัดการลูกค้า</li></a>
+    <a href="products.php"><li>ออกจากระบบ</li></a>
 </ul>
 </body>
 </html>
