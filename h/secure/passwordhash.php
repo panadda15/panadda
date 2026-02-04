@@ -1,4 +1,4 @@
 <?php
-$hashed_pwd = password_hash("1234", PASSWORD_DEFAULT);
+$hashed_pwd = password_hash("4321", PASSWORD_DEFAULT);
 echo $hashed_pwd
 ?>
