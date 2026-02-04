@@ -2,38 +2,20 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>จัดการสินค้า - ปนัดดา</title>
+<title>จัดการสินค้า -ปนัดดา</title>
 </head>
 
 <body>
-<h1>จัดการสินค้า - ปนัดดา</h1>
 
-<form method ="post" action="">
-Username <input type="text" name="auser" autofocus required><br>
-Password <input type="password" name="apwd" required><br>
-<button type="submit" name="Submit">LOGIN</button>
-</form>
+<h1>จัดการสินค้า -ปนัดดา</h1>
 
-<?php
-if(isset($_POST['Submit'])) {
-	include_once("connectdb.php");
-	$sql = "SELECT * FROM admin WHERE a_username ='{$_POST['auser']}' AND  a_password ='{$_POST['apwd']}' LIMIT 1" ;
-	$rs = mysqli_query($conn,$sql);
-	$num = mysqli_num_rows($rs);
-	
-	if ($num == 1) {
-		$data = mysqli_fetch_array($rs);
-		$_SESSION['aid'] = $data['a_id'];
-		$SESSION['aname']= $data['a_name'];
-		echo "<script>";
-		echo "window.location='index2.php';";
-		echo "</script>";
-	} else {
-		echo "<script>";
-		echo "alert('Username หรือ Password ไม่ถูกต้อง');";
-		echo "</script>";
-	}
-}
-?>
+<?php echo "แอดมิน: ". $_SESSION['a_name']; ?> <br>
+
+<ul>
+	<a href="products.php"><li>จัดการสินค้า</li></a>
+	<a href="orders.php"><li>จัดการออเดอร์</li></a>
+	<a href="customers.php"><li>จัดการลูกค้า</li></a>
+	<a href="logout.php"><li>ออกจากระบบ</li></a>
+</ul>
 </body>
 </html>
