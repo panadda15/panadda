@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>งาน i -- ปนัดดา ศรีลารักษ์ (มะปราง)</title>
+<title>ปนัดดา ศรีลารักษ์ (มะปราง)</title>
 </head>
 
 <body>
