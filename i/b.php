@@ -8,8 +8,21 @@
 <body>
 <h1>งาน i -- ปนัดดา ศรีลารักษ์ (มะปราง)</h1>
 
-<form method="post" action="" >
-	ชื่อภาค <input type="text" name="rname" autofocus required>
+<form method="post" action="" enctype="multipart/form-data" >
+	ชื่อจังหวัด <input type="text" name="pname" autofocus required><br>
+	รูปภาพ<input type="file" name="pimage" required><br>
+    
+    ภาค
+    <select name="rid">
+<?php
+include_once("connectdb.php");
+$sql3 = "SELECT * FROM regions";
+$rs3 = mysqli_query($conn, $sql3);
+ while ($data3 = mysqli_fetch_array($rs3)){
+?>    
+    	<option value="<?php echo $data3['r_id'] ; ?>"><?php echo $data3['r_name'] ;?></option>
+<?php }?>        
+         
     <button type="submit" name="Submit">บันทึก</button>	
 </form><br><br>
 
@@ -25,13 +38,13 @@ if(isset($_POST['Submit'])){
 
 <table border="1">
 	<tr>
-    	<th>รหัสภาค</th>
-        <th>ชื่อภาค</th>
+    	<th>รหัสจังหวัด</th>
+        <th>ชื่อจังหวัด</th>
         <th>ลบ</th>
     </tr>
 <?php
 include_once("connectdb.php");
-$sql = "SELECT * FROM regions";
+$sql = "SELECT * FROM 'provinces'";
 $rs = mysqli_query($conn, $sql);
  while ($data = mysqli_fetch_array($rs)){
 ?>   
