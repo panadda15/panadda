@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>จุฬาลักษณ์ ลมดา (พลอย)</title>
+<title>ปนัดดา ศรีลารักษ์ (มะปราง)</title>
 </head>
 
 <body>
-<h1>งาน i -- จุฬาลักษณ์ ลมดา (พลอย)</h1>
+<h1>งาน i -- ปนัดดา ศรีลารักษ์ (มะปราง)</h1>
 
 <form method="post" action="" enctype="multipart/form-data" >
 	ชื่อจังหวัด <input type="text" name="pname" autofocus required><br>
