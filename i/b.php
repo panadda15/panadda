@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>ปนัดดา ศรีลารักษ์ (มะปราง)</title>
+<title>จุฬาลักษณ์ ลมดา (พลอย)</title>
 </head>
 
 <body>
-<h1>งาน i -- ปนัดดา ศรีลารักษ์ (มะปราง)</h1>
+<h1>งาน i -- จุฬาลักษณ์ ลมดา (พลอย)</h1>
 
 <form method="post" action="" enctype="multipart/form-data" >
 	ชื่อจังหวัด <input type="text" name="pname" autofocus required><br>
@@ -63,7 +63,7 @@ $rs = mysqli_query($conn, $sql);
         <td><?php echo $data['p_name'] ;?></td>
         <td><?php echo $data['r_name'] ;?></td>
         <td><img src="images/<?php echo $data['p_id'] ; ?>.<?php echo $data['p_ext'] ; ?>" width="140"></td>
-        <td width="80" align="center"><a href="delete_province.php?id=<?php echo $data['p_id']; ?>&ext=<?php echo $data['p_ext'] ;?>" onClick="return confirm('ยืนยันการลบ');"><img src="images/delete.jpg" width="50"></a></td>
+        <td width="80" align="center"><a href="delete_province.php?id=<?php echo $data['p_id']; ?>&ext=<?php echo $data['p_ext'] ;?>" onClick="return confirm('ยืนยันการลบ');"><img src="images/Delete.jpg" width="40"></a></td>
     </tr>
 <?php } ?>
 </table>
