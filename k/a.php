@@ -38,8 +38,8 @@
 
     <h1>งาน k 66010914050 ปนัดดา ศรีลารักษ์ (มะปราง)</h1>
 
-    <button class="btn-green" onclick="showImage('images/222.jpg')">คลิก</button>
-    <button class="btn-orange" onclick="showImage('images/111.jpg')">คลิก</button>
+    <button class="btn-green" onclick="showImage('images/222.jpg')">ปุ่มแรก</button>
+    <button class="btn-orange" onclick="showImage('images/111.jpg')">ปุ่มสอง</button>
 
     <div id="myModal" class="modal">
         <span class="close" onclick="closeImage()">&times; ปิดรูปภาพ</span>
