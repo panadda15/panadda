@@ -76,8 +76,8 @@ while ($data = mysqli_fetch_array($rs_show)){
         </td>
         
         <td align="center">
-            <a href="delete_provinces.php?id=<?php echo $data['p_id']; ?>&ext=<?php echo $data['p_ext']; ?>" onClick="return confirm('ยืนยันการลบข้อมูลนี้?');">
-                <img src="images/delete.jpg" width="30">
+            <a href="delete_province.php?id=<?php echo $data['p_id']; ?>&ext=<?php echo $data['p_ext']; ?>" onClick="return confirm('ยืนยันการลบข้อมูลนี้?');">
+                <img src="images/D.jpg" width="30">
                 
                 </a>
         </td>
