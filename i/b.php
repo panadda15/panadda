@@ -1,3 +1,20 @@
+<?php
+include_once("connectdb.php");
+
+if(isset($_POST['Submit'])){
+    $pname = $_POST['pname'];
+    $ext = pathinfo($_FILES['pimage']['name'], PATHINFO_EXTENSION);
+    $rid = $_POST['rid'];
+    
+    $sql_insert = "INSERT INTO provinces (p_id, p_name, p_ext, r_id) VALUES (NULL, '{$pname}', '{$ext}', '{$rid}')";
+    mysqli_query($conn, $sql_insert) or die ("เพิ่มข้อมูลไม่ได้: " . mysqli_error($conn));
+    
+    $pid = mysqli_insert_id($conn);
+    
+    move_uploaded_file($_FILES['pimage']['tmp_name'], "images/".$pid.".".$ext);
+}
+?>
+
 <!doctype html>
 <html>
 <head>
