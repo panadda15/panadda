@@ -7,6 +7,7 @@
 
 <body>
 <h1>งาน k 66010914050 ปนัดดา ศรีลารักษ์ (มะปราง)</h1>
-
+<button type="submit" name="Submit">ปุ่มที่1</button>
+<button type="submit" name="Submit">ปุ่มที่2</button>
 </body>
 </html>
